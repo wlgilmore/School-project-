@@ -69,6 +69,10 @@
 				alert("User not allowed."); 
 				return false; 
 			} 
+			else if (badgeNumber.length > 3 ) { 
+				alert("Badge number should be 3 numbers or less."); 
+				return false; 
+			} 
 			else if (!allowedBadgeNumbers.includes(badgeNumber)) { 
 				alert("Badge number not allowed."); 
 				return false; 
@@ -76,7 +80,7 @@
  
 			else {
 				alert ("Welcome"+" " + firstName + " " + lastName + "!");
-				window.location.href = "file:///C:/Users/prog/Documents/school/countdown.html";
+				window.location.href = "countdown.html";
 				return false;
 			}
 		} 
