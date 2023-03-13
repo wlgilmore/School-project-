@@ -5,7 +5,6 @@
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>UAT Satellite Control Center</title> 
-
 	<style> 
 		body { 
 			background-image: url('https://cdn.pixabay.com/photo/2020/03/21/14/45/rocket-4954229_960_720.jpg'); 
@@ -27,9 +26,14 @@
 			display: inline-block;
 			font-size: 16px;
 		}
+		.warning {
+			font-weight: bold;
+			color: red;
+		}
 
 	</style> 
 <script type="text/javascript">
+		
 		// Set the starting count adn variable
 		var count = 10;
 		var timer;
@@ -61,7 +65,7 @@
 
 				// Display the countdown timer value and the warning message if applicable
 				if (count <= 5 && count > 0) {
-					document.getElementById("countdown").innerHTML = count + "Warning Less than ½ way to launch, time left";
+					document.getElementById("countdown").innerHTML = count + " -<span class='warning'>Warning Less than ½ way to launch!</span>";
 				} else if (count >= 0) {
 					document.getElementById("countdown").innerHTML = count;
 				}
@@ -99,6 +103,7 @@
     <p><h1>UAT SPACE LAUNCH PROGRAM</h1></p>
     <h2>Countdown T-Minus:</h2>
 	<h2><p id="countdown">10</p></h2>
+	<div id="countdown" class="warning"></div>
 	<button onclick="startCountdown()">Start/Continue</button>
 	<button onclick="stopCountdown()">Stop/Reset</button>
 
