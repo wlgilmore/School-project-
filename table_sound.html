@@ -1,0 +1,176 @@
+<!-- Wyatt Gilmore -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UAT Satellite Control Center</title> 
+    <style>
+	  img {
+			float: left;
+			margin-right: 20px;
+	  }
+	   p {
+			margin-left: 120px;
+			text-align: center;
+			padding: 70px 0;
+			font-family: Arial, sans-serif; 
+			font-size: 20px; 
+			line-height: 1.5; 
+	  }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      th, td {
+        text-align: left;
+        padding: 0px;
+      }
+
+      th {
+        background-color: #333;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      button {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+
+      button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+	  
+	
+    </style>
+  </head>
+  <body>
+  <a href="https://imgupx.com/XBgQYxpY">
+  <img src="https://i.imgupx.com/dpcchuWC/large/UATspaceLogo.jpg" alt="UATspaceLogo.jpg" border="0" width="300" height="300"></a>
+    <p><h1> UAT SPACE PROGRAM</h1></p>
+	<table>
+      <tr>
+        <th>Data Type</th>
+        <th>Reading</th>
+      </tr>
+      <tr>
+        <td>Time Elapsed</td>
+        <td>15 seconds</td>
+      </tr>
+      <tr>
+        <td>Lattitude</td>
+        <td>0</td>
+      </tr>
+	  <tr>
+        <td>Longitude</td>
+        <td>0</td>
+      </tr>
+	  <tr>
+        <td>GPS Altitude</td>
+        <td>0</td>
+      </tr>
+	  <tr>
+        <td>BMP Sensor Altitude</td>
+        <td>30383.04</td>
+      </tr>
+	  <tr>
+        <td>BMP Sensor Pressure</td>
+        <td>2.34</td>
+      </tr>
+	  <tr>
+        <td>BMP Sensor Temp</td>
+        <td>0</td>
+      </tr>
+	  <tr>
+        <td>Digital Sensor Temp</td>
+        <td>24.12</td>
+      </tr>
+	  <tr>
+        <td>CSS Sensor Temp</td>
+        <td>25</td>
+      </tr>
+	  <tr>
+        <td>CSS Sensor eC02</td>
+        <td>400</td>
+      </tr>
+	  <tr>
+        <td>CSS Sensor TVOC</td>
+        <td>0</td>
+      </tr>
+	  <tr>
+        <td>UV</td>
+        <td>0</td>
+      </tr>
+	  <tr>
+        <td>Accel X</td>
+        <td>-0.87</td>
+      </tr>
+	  <tr>
+        <td>Accel Y</td>
+        <td>-0.02</td>
+      </tr>
+	  <tr>
+        <td>Accel Z</td>
+        <td>9.61</td>
+      </tr>
+	  <tr>
+        <td>Magnetic X</td>
+        <td>0.13</td>
+      </tr>
+	    <tr>
+        <td>Magnetic Y</td>
+        <td>0.57</td>
+      </tr> 
+	  <tr>
+        <td>Magnetic Z</td>
+        <td>-0.24</td>
+      </tr>  
+	  <tr>
+        <td>Gyro X</td>
+        <td>4.66</td>
+      </tr>
+	    <tr>
+        <td>Magnetic Y</td>
+        <td>0.01</td>
+      </tr>
+	    <tr>
+        <td>Magnetic Z</td>
+        <td>-0.4</td>
+      </tr>
+    </table>
+
+    <button id="start-btn" onclick="start()">Start</button>
+    <button id="stop-btn" onclick="stop()" disabled>Stop</button>
+
+    <script type="text/javascript">
+      function start() {
+        document.getElementById("stop-btn").disabled = false;
+        document.getElementById("start-btn").disabled = true;
+        audio.play();
+      }
+
+      function stop() {
+        document.getElementById("start-btn").disabled = false;
+        document.getElementById("stop-btn").disabled = true;
+        audio.pause();
+		audio.currentTime = 0;
+      }
+	  var audio = new Audio('us-lab-background.mp3');
+
+    </script>
+  </body>
+</html>
